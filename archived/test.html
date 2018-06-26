@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,206 +6,104 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+      <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+      <meta name="author" content="Marko Krstic and Bootstrap contributors">
+      <link rel="icon" href="assets/img/favicon.ico">
 
-
-<style>
-body {
-  overflow-x: hidden;
-}
-.off-canvas-toggle {
-  float: left;
-  padding: 0 15px;
-}
-.off-canvas {
-  width: 300px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #333;
-  transform: translateX(-100%);
-  transition: .4s ease-in-out;
-  z-index: 1060;
-}
-.off-canvas-active .off-canvas {
-  transform: translateX(0);
-}
-.navbar-fixed-top {
-  transition: .4s ease-in-out;
-  width: 100%;
-}
-.page-wrapper {
-  padding-top: 50px;
-  transition: .4s ease-in-out;
-}
-.off-canvas-active .page-wrapper,
-.off-canvas-active .navbar-fixed-top {
-  transform: translateX(300px);
-}
-.list-group {
-  padding: 20px;
-}
-.off-canvas-overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 1050;
-  visibility: hidden;
-  opacity: 0;
-  transition: .4s ease-in-out;
-}
-.off-canvas-active .off-canvas-overlay {
-  opacity: 1;
-  visibility: visible;
-}</style>
-
+      <title>
+            Hammer Theme
+      </title>
 
       <!-- Compiled all parts into one -->
-      <!-- @stylesheet style -->
+      <link rel='stylesheet' href='assets/stylesheets/style.css'>
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+
 </head>
+<body class="">
 
-<body>
-
-
-
-
-
-
-
-<div class="off-canvas-overlay"></div>
-
-<div class="off-canvas">
-  <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-</div>
+		<div class="container">
+				<div class="row">
+					<img src="assets/img/logo.svg" alt="logo" id="mainlogo">
+					<button type="button" class="btn btn-primary btn-xs visible-xs pull-right" data-toggle="offcanvas">Toggle nav</button>
+				</div>
+		</div>
 
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="#" class="off-canvas-toggle navbar-text"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+		<div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        <div class="col-sm-3 sidebar-offcanvas" id="sidebar">
+	        <span class="welcome">Welcome Steve</span>
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Home</a>
+            <a href="#" class="list-group-item">Time off</a>
+            <a href="#" class="list-group-item">Sign out</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+
+        <div class="col-xs-12 col-sm-9 col-eq-height">
+					asdfg
+        </div><!--/.col-xs-12.col-sm-9-->
+      </div><!--/row-->
+
+
+
+    </div><!--/.container-->
+
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-fixed-240">Fixed 240px</div>
+        <div class="col-md-12 col-offset-400">
+
+            Standard grid system content here
+
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
     </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
-</nav>
-
-
-
-
-
-
-<div class="page-wrapper">
-  <div class="container">
-    <div class="page-header">
-      <h1>Example page header <small>Subtext for header</small></h1>
-    </div>
-    <div class="jumbotron">
-      <h1>Hello, world!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae assumenda eius excepturi non deleniti atque unde magnam, sapiente reprehenderit aliquid necessitatibus at, ratione aspernatur ut amet, explicabo corrupti. Possimus.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
-      </div>
-      <div class="panel-body">
-        Panel content
-      </div>
-    </div>
-  </div>
 </div>
 
 
+-->
 
 
 
-<script src='assets/js/vendor/jquery.js'></script>
-<script src='assets/js/bootstrap.js'></script>
-
-<script type="text/javascript">
-	$('.off-canvas-toggle').on('click', function(event) {
-  event.preventDefault();
-  $('body').toggleClass('off-canvas-active');
-});
-
-$(document).on('mouseup touchend', function(event) {
-  var offCanvas = $('.off-canvas')
-  if (!offCanvas.is(event.target) && offCanvas.has(event.target).length === 0) {
-    $('body').removeClass('off-canvas-active')
-  }
-});
-
-	</script>
 
 
 
+      <!-- @javascript jquery -->
+      <!-- @javascript bootstrap -->
+      <!-- @javascript offcanvas -->
 </body>
 </html>

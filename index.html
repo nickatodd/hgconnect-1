@@ -1,0 +1,92 @@
+<!-- $title HG Connect Main Screen -->
+<!-- $description Put a description here -->
+<!-- $author Ben Moodie -->
+<!-- $keywords Keywords go here -->
+
+<!-- $bodyclass main -->
+
+<!-- @include _header.html -->
+
+
+
+	<!-- Container for toggling menu on mobile -->
+	<div class="container fixed-left hidden-sm hidden-md hidden-lg" id="mobile-header-toggle">
+		<div class="row">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="logo" class="mainlogo"></a>
+			<button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
+        <span class="sr-only">Toggle navigation</span>
+        <span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </span>
+      </button>
+		</div>
+	</div>
+
+	<!--off canvas mobile sidebar -->
+	<div class="container hidden-sm hidden-md hidden-lg" id="mobile-sidebar">
+		<div class="row">
+	    <div class="col-sm-3 no-overflow">
+				<nav class="navbar hg-navbar" role="navigation">
+	        <div class="navbar-offcanvas navbar-offcanvas-touch hg-sidebar" id="js-bootstrap-offcanvas">
+		        <h3>Menu</h3>
+	          <ul class="sidenav-list">
+			        <li class="active"><a href="#"><img src="assets/img/icons/home.svg" alt="">Home</a></li>
+			        <li><a href="#"><img src="assets/img/icons/time.svg" alt="">Time off</a></li>
+			        <li><a href="#"><img src="assets/img/icons/signout.svg" alt="">Sign out</a></li>
+	          </ul>
+	        </div>
+				</nav>
+	     </div>
+		</div>
+	</div>
+
+	<!--desktop hard sidebar  -->
+	<div class="hidden-xs" id="hard-sidebar">
+    <img src="assets/img/logo.svg" alt="logo" class="mainlogo">
+    <h3>Welcome,<br>Steve!</h3>
+    <ul class="sidenav-list">
+      <li class="active"><a href="#"><img src="assets/img/icons/home.svg" alt="">Home</a></li>
+      <li><a href="#"><img src="assets/img/icons/time.svg" alt="">Time off</a></li>
+      <li><a href="#"><img src="assets/img/icons/signout.svg" alt="">Sign out</a></li>
+    </ul>
+	</div>
+
+
+<!-- All content -->
+<div class="fixed-left" id="main-wrapper">
+	<div class="container">
+		<div class="row">
+    	<div class="col-xs-12">
+
+
+				<!-- Put your content here, in cards -->
+				<div class="card">
+					<div class="date-badge">
+						<span class="month">JUN</span>
+						<span class="date">23</span>
+					</div>
+		    	<h1>A MESSAGE FROM JOHN</h1>
+		    	<p>Please remember to complete the Dealership Employer survey.</p>
+					<p>Long weekend schedule for the summer of 2018.</p>
+				</div>
+
+				<div class="card">
+		    	<h1>TIME off</h1>
+		    	<p>See how many available days you have left, and submit new requests for time off.</p>
+					<button type="button" class="btn btn-primary">
+					  <img src="assets/img/icons/time.svg" alt="">Time Off
+					</button>
+					<button type="button" class="btn btn-default">EDIT
+					</button>
+				</div>
+
+
+			</div>
+		</div>
+ </div>
+</div>
+
+
+<!-- @include _footer.html -->
