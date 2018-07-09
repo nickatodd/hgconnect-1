@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-      <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-      <meta name="author" content="Marko Krstic and Bootstrap contributors">
+      <meta name="description" content="Put a description here">
+      <meta name="keywords" content="Keywords go here">
+      <meta name="author" content="Ben Moodie">
       <link rel="icon" href="assets/img/favicon.ico">
 
-      <title>
-            Hammer Theme
-      </title>
-
-      <!-- Compiled all parts into one -->
+      <title>HG Connect Main Screen</title>
       <link rel='stylesheet' href='assets/stylesheets/style.css'>
 
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,31 +21,12 @@
     <![endif]-->
 
 
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
 
 </head>
-<body>
+
+<body class="main">
+
+
 
 	<!-- Container for toggling menu on mobile -->
 	<div class="container fixed-left hidden-sm hidden-md hidden-lg" id="mobile-header-toggle">
@@ -94,43 +72,121 @@
     </ul>
 	</div>
 
-	<!-- All content -->
-	<div class="fixed-left" id="main-wrapper">
-		<div class="container">
-			<div class="row">
-	    	<div class="col-xs-12">
+
+<!-- All content -->
+<div class="fixed-left" id="main-wrapper">
+	<div class="container">
+		<div class="row">
+    	<div class="col-xs-12">
 
 
-					<!-- Put your content here, in cards -->
-					<div class="card">
-						<div class="date-badge">
-							<span class="month">JUN</span>
-							<span class="date">23</span>
-						</div>
-			    	<h1>A MESSAGE FROM JOHN</h1>
-			    	<p>Please remember to complete the Dealership Employer survey.</p>
-						<p>Long weekend schedule for the summer of 2018.</p>
+				<!-- Put your content here, in cards -->
+				<div class="card">
+					<div class="date-badge">
+						<span class="month">JUN</span>
+						<span class="date">23</span>
 					</div>
-
-					<div class="card">
-			    	<h1>TIME off</h1>
-			    	<p>See how many available days you have left, and submit new requests for time off.</p>
-						<button type="button" class="btn btn-primary">
-						  <img src="assets/img/icons/time.svg" alt="">Time Off
-						</button>
-						<button type="button" class="btn btn-default">EDIT
-						</button>
-					</div>
-
-
+		    	<h1>A MESSAGE FROM JOHN</h1>
+		    	<p>Please remember to complete the Dealership Employer survey.</p>
+					<p>Long weekend schedule for the summer of 2018.</p>
 				</div>
+
+				<div class="card">
+		    	<h1>TIME off</h1>
+		    	<p>See how many available days you have left, and submit new requests for time off.</p>
+					<button type="button" class="btn btn-primary">
+					  <img src="assets/img/icons/time.svg" alt="">Time Off
+					</button>
+					<button type="button" class="btn btn-default">EDIT
+					</button>
+				</div>
+
+
+				<!-- Styled Metronis Components -->
+				<div class="card">
+					<!-- Back Link -->
+					<a href="#" class="back-link">Back</a>
+
+					<form class="metronics-form" type="get" action="#">
+						<!-- Select Input -->
+						<select class="form-control">
+						  <option>Personal Emergency Leave</option>
+						  <option>Bad Street food</option>
+						  <option>Family Funeral</option>
+						  <option>Vacation</option>
+						</select>
+
+						<!-- Datepicker Input -->
+			      <div class="calendar-date">
+					    <label for="calendar-date">SELECT EACH DAY</label>
+					  </div>
+						<input type="hidden" id="selected-date" class="form-control">
+						<p class="results">2 days selected</p>
+
+
+						<!-- Classic Text Input Sample
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					  </div> -->
+
+
+					  <button type="submit" class="btn btn-primary">Next →</button>
+
+
+
+
+<div class="input-group input-daterange">
+    <input type="text" class="form-control" value="2012-04-05">
+    <div class="input-group-addon">to</div>
+    <input type="text" class="form-control" value="2012-04-19">
+</div>
+
+
+
+
+					</form>
+
+
+
+
+
+
+
+
+
+
+
+		    </div>
+
+
 			</div>
-	 </div>
-	</div>
+		</div>
+ </div>
+</div>
+
+
+
+
 
       <script src='assets/js/vendor/jquery.js'></script>
       <script src='assets/js/bootstrap.js'></script>
+      <script src='assets/js/bootstrap-datepicker.js'></script>
       <script src='assets/js/offcanvas.js'></script>
+      <script src='assets/js/custom.js'></script>
+
+
+      <script type="text/javascript">
+            $('.current').each(function(){
+            $(this).removeClass('current');
+            $(this).addClass('active');
+            });
+
+						$('.calendar-date').datepicker({
+
+						});
+
+      </script>
 
 
 

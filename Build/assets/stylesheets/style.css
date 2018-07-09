@@ -6017,7 +6017,8 @@ p {
   width: 100%;
   background: white;
   padding: 40px 112px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 3px; }
 
 @media (max-width: 767px) {
   .card {
@@ -6130,3 +6131,563 @@ p {
   .login-form .form-logo {
     margin: 40px auto;
     width: 111px; }
+
+.back-link {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0080FF;
+  top: -16px;
+  position: relative; }
+  .back-link:before {
+    content: "← "; }
+
+.metronics-form label {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  color: #575757;
+  line-height: 14px;
+  margin-top: 15px; }
+.metronics-form .form-control {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  margin: 20px 0 20px 0;
+  min-width: 150px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #7FBFFF;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../img/icons/dropdown.svg) right center no-repeat white; }
+  .metronics-form .form-control:hover {
+    cursor: pointer; }
+.metronics-form .styled-checkbox {
+  position: absolute;
+  opacity: 0; }
+  .metronics-form .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: normal;
+    color: #575757;
+    margin-bottom: 20px; }
+  .metronics-form .styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid #979797;
+    border-radius: 5px; }
+  .metronics-form .styled-checkbox:hover + label:before {
+    background: #0080FF;
+    border: none; }
+  .metronics-form .styled-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
+  .metronics-form .styled-checkbox:checked + label:before {
+    background: #0080FF; }
+  .metronics-form .styled-checkbox:disabled + label {
+    color: #b8b8b8;
+    cursor: auto; }
+  .metronics-form .styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd; }
+  .metronics-form .styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg); }
+.metronics-form .calendar-date {
+  background: #FFFFFF;
+  border-radius: 2.52px; }
+  .metronics-form .calendar-date:hover {
+    cursor: pointer; }
+  @media (max-width: 767px) {
+    .metronics-form .calendar-date {
+      width: 100%; } }
+  .metronics-form .calendar-date .datepicker {
+    box-shadow: 0 0 10px 5px #EDEDED;
+    margin-top: 10px;
+    padding: 40px; }
+  @media (max-width: 767px) {
+    .metronics-form .calendar-date .datepicker-days {
+      width: 100%; } }
+  .metronics-form .calendar-date table {
+    width: 100%; }
+  .metronics-form .calendar-date .previous-month {
+    background: #EFF7FF;
+    border-radius: 30px; }
+    .metronics-form .calendar-date .previous-month img {
+      height: 13px; }
+    .metronics-form .calendar-date .previous-month:hover {
+      background: #D4DDE7; }
+  .metronics-form .calendar-date .next-month {
+    background: #EFF7FF;
+    border-radius: 30px; }
+    .metronics-form .calendar-date .next-month img {
+      height: 13px; }
+    .metronics-form .calendar-date .next-month:hover {
+      background: #D4DDE7; }
+  .metronics-form .calendar-date .datepicker-switch {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #6B7897;
+    text-align: center; }
+  .metronics-form .calendar-date table td {
+    text-align: center;
+    color: #7C86A2; }
+  .metronics-form .calendar-date table th {
+    text-align: center; }
+  .metronics-form .calendar-date .dow {
+    font-size: 12px;
+    color: rgba(52, 72, 94, 0.54);
+    text-align: center; }
+  .metronics-form .calendar-date day {
+    font-size: 8px;
+    color: #7C86A2;
+    text-align: center; }
+
+p.results {
+  font-size: 12px;
+  margin: 10px 0; }
+
+@media (max-width: 767px) {
+  button {
+    min-width: 100%;
+    margin-top: 10px; } }
+.date-picker {
+  height: 25px;
+  padding: 0;
+  border: 0;
+  line-height: 25px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: #303030;
+  position: relative;
+  z-index: 2; }
+
+.date-picker-wrapper {
+  position: absolute;
+  font-family: "Lato", sans-serif;
+  z-index: 1;
+  box-shadow: 0 0 15px 1px #EDEDED;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  font-size: 12px;
+  line-height: 20px;
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: initial;
+  box-sizing: initial; }
+
+.dp-clearfix {
+  clear: both;
+  height: 0;
+  font-size: 0; }
+
+.date-picker-wrapper.inline-wrapper {
+  position: relative; }
+
+.date-picker-wrapper.single-date {
+  width: auto; }
+
+.date-picker-wrapper.no-topbar {
+  padding-top: 12px; }
+
+.date-picker-wrapper .footer {
+  font-size: 11px;
+  padding-top: 3px; }
+
+.date-picker-wrapper b {
+  color: #666;
+  font-weight: 700; }
+
+.date-picker-wrapper a {
+  color: #6bb4d6;
+  text-decoration: underline; }
+
+.date-picker-wrapper .month-name {
+  text-transform: capitalize;
+  font-size: 12px;
+  color: #6B7897;
+  letter-spacing: 0.25px;
+  text-align: center;
+  float: left;
+  margin-left: 10px; }
+
+.date-picker-wrapper .select-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle; }
+
+.date-picker-wrapper .select-wrapper:hover {
+  text-decoration: underline; }
+
+.date-picker-wrapper .month-element {
+  display: inline-block;
+  vertical-align: middle; }
+
+.date-picker-wrapper .select-wrapper select {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: -1px;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+  filter: alpha(opacity=1);
+  opacity: 0.01; }
+
+.date-picker-wrapper .month-wrapper {
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 5px;
+  cursor: default;
+  position: relative;
+  overflow: hidden; }
+
+.date-picker-wrapper .month-wrapper table {
+  width: 100%;
+  float: left; }
+
+.date-picker-wrapper .month-wrapper table.month2 {
+  width: 190px;
+  float: left; }
+
+.date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td {
+  vertical-align: middle;
+  text-align: center;
+  line-height: 14px;
+  margin: 0px;
+  padding: 0px;
+  height: 25px; }
+
+.date-picker-wrapper .month-wrapper table .day {
+  padding: 5px 0;
+  line-height: 1;
+  font-size: 12px;
+  margin-bottom: 1px;
+  color: #BFDFFF;
+  cursor: default;
+  border-radius: 100%;
+  max-width: 25px;
+  max-height: 25px;
+  margin: 0 auto; }
+
+.date-picker-wrapper .month-wrapper table div.day.lastMonth, .date-picker-wrapper .month-wrapper table div.day.nextMonth {
+  color: #999;
+  cursor: default; }
+
+.date-picker-wrapper .month-wrapper table .day.checked {
+  background-color: #BFDFFF; }
+
+.date-picker-wrapper .month-wrapper table .week-name {
+  height: 20px;
+  color: #B8BFC6;
+  line-height: 20px;
+  font-weight: 100;
+  text-transform: uppercase; }
+
+.date-picker-wrapper .month-wrapper table .day.has-tooltip {
+  cursor: help !important; }
+
+.date-picker-wrapper .month-wrapper table .day.has-tooltip .tooltip {
+  white-space: nowrap; }
+
+.date-picker-wrapper .time label {
+  white-space: nowrap; }
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid {
+  color: #333;
+  cursor: pointer; }
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+  background-color: #BFDFFF; }
+
+.date-picker-wrapper .month-wrapper table .day.nextMonth, .date-picker-wrapper .month-wrapper table .day.lastMonth {
+  display: none; }
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  background-color: #BFDFFF; }
+
+.date-picker-wrapper .month-wrapper table .day.real-today.checked, .date-picker-wrapper .month-wrapper table .day.real-today.hovering {
+  background-color: #BFDFFF; }
+
+.date-picker-wrapper table .caption {
+  height: 40px; }
+
+.date-picker-wrapper table .caption > th:first-of-type, .date-picker-wrapper table .caption > th:last-of-type {
+  width: 27px; }
+
+.date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev {
+  padding: 0 5px;
+  cursor: pointer; }
+
+.date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover {
+  background-color: #BFDFFF;
+  color: white; }
+
+.date-picker-wrapper .gap {
+  position: relative;
+  z-index: 1;
+  width: 15px;
+  height: 100%;
+  background-color: red;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+  top: -5px;
+  margin: 0 10px -10px;
+  visibility: hidden;
+  height: 0; }
+
+.date-picker-wrapper .gap .gap-lines {
+  height: 100%;
+  overflow: hidden; }
+
+.date-picker-wrapper .gap .gap-line {
+  height: 15px;
+  width: 15px;
+  position: relative; }
+
+.date-picker-wrapper .gap .gap-line .gap-1 {
+  z-index: 1;
+  height: 0;
+  border-left: 8px solid white;
+  border-top: 8px solid #eee;
+  border-bottom: 8px solid #eee; }
+
+.date-picker-wrapper .gap .gap-line .gap-2 {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: 2;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-top: 8px solid white; }
+
+.date-picker-wrapper .gap .gap-line .gap-3 {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  z-index: 2;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid white; }
+
+.date-picker-wrapper .gap .gap-top-mask {
+  width: 6px;
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  background-color: #eee;
+  z-index: 3; }
+
+.date-picker-wrapper .gap .gap-bottom-mask {
+  width: 6px;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 7px;
+  background-color: #eee;
+  z-index: 3; }
+
+.date-picker-wrapper .selected-days {
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar {
+  line-height: 1.4;
+  position: relative;
+  padding: 10px 40px 10px 0;
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar .error-top, .date-picker-wrapper .drp_top-bar .normal-top {
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar .default-top {
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar.error .default-top {
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar.error .error-top {
+  display: block;
+  color: red; }
+
+.date-picker-wrapper .drp_top-bar.normal .default-top {
+  display: none; }
+
+.date-picker-wrapper .drp_top-bar.normal .normal-top {
+  display: block; }
+
+.date-picker-wrapper .drp_top-bar.normal .normal-top .selection-top {
+  color: #333; }
+
+.date-picker-wrapper .drp_top-bar .apply-btn {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  padding: 3px 5px;
+  margin: 0;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #d9eef7;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: -moz-linear-gradient(top, #00adee, #0078a5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  color: white;
+  line-height: initial; }
+
+.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+  cursor: pointer;
+  color: #606060;
+  border: solid 1px #b7b7b7;
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff, #ededed);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); }
+
+.date-picker-wrapper .time {
+  position: relative; }
+
+.date-picker-wrapper.single-month .time {
+  display: block; }
+
+.date-picker-wrapper .time input[type=range] {
+  vertical-align: middle;
+  width: 129px;
+  padding: 0;
+  margin: 0;
+  height: 20px; }
+
+.date-picker-wrapper .time1 {
+  width: 180px;
+  padding: 0 5px;
+  text-align: center; }
+
+/*time styling*/
+.time2 {
+  width: 180px;
+  padding: 0 5px;
+  text-align: center; }
+
+.date-picker-wrapper .time1 {
+  float: left; }
+
+.date-picker-wrapper .time2 {
+  float: right; }
+
+.date-picker-wrapper .hour {
+  text-align: right; }
+
+.minute {
+  text-align: right; }
+
+.date-picker-wrapper .hide {
+  display: none; }
+
+.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected {
+  background-color: #0080FF !important;
+  color: white !important; }
+
+.date-picker-wrapper .date-range-length-tip {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: -8px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  display: none;
+  background-color: yellow;
+  padding: 0 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  -moz-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  -o-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); }
+
+.date-picker-wrapper .date-range-length-tip:after {
+  content: '';
+  position: absolute;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid yellow;
+  left: 50%;
+  margin-left: -4px;
+  bottom: -4px; }
+
+.date-picker-wrapper.two-months.no-gap .month1 .next, .date-picker-wrapper.two-months.no-gap .month2 .prev {
+  display: none; }
+
+.date-picker-wrapper .week-number {
+  padding: 5px 0;
+  line-height: 1;
+  font-size: 12px;
+  margin-bottom: 1px;
+  color: #999;
+  cursor: pointer; }
+
+.date-picker-wrapper .week-number.week-number-selected {
+  color: #BFDFFF;
+  font-weight: bold; }
+
+.date-picker-wrapper .prev {
+  display: inline-block;
+  height: 20px;
+  width: 26px;
+  margin-right: 10px;
+  background: #EFF7FF;
+  border-radius: 30px; }
+  .date-picker-wrapper .prev img {
+    margin: 2px auto;
+    height: 14px; }
+
+.date-picker-wrapper .next {
+  display: inline-block;
+  height: 20px;
+  width: 26px;
+  background: #EFF7FF;
+  border-radius: 30px; }
+  .date-picker-wrapper .next img {
+    margin: 2px auto;
+    height: 14px; }
+
+.date-picker-wrapper .month-nav {
+  float: right; }
